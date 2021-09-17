@@ -19,7 +19,7 @@ def get_token(username):
     token = util.prompt_for_user_token(username, scope, client_id, client_secret, redirect_url, oauth_manager=oauth)
     return token
 
-print("Welcome to Spotfiy Cleaner")
+print("Welcome to Spotify Cleaner")
 username = input("Please enter your Spotify username: ")
 token = get_token(username)
 cleaner = SpotifyCleaner(token)
