@@ -19,4 +19,8 @@ class Playlist:
     @property
     def url(self):
         return self.data["external_urls"]["spotify"]
+
+    @property
+    def is_public(self):
+        return self.data["public"]
     

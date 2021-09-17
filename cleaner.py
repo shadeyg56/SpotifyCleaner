@@ -46,7 +46,7 @@ class SpotifyCleaner(spotipy.Spotify):
 
     def clean_playlist(self, playlist: Playlist):
         MAX_TRACKS = 100
-        self.user_playlist_create(self.user_id, f"{playlist.name} (Clean)")
+        self.user_playlist_create(self.user_id, f"{playlist.name} (Clean)", public=playlist.is_public)
         clean_playlist = self.get_clean_playlist(playlist.name)
         if clean_playlist:
             clean_songs = []

@@ -11,7 +11,7 @@ def load_config():
 
 def get_token(username):
     config = load_config()
-    scope = "playlist-modify-public"
+    scope = "playlist-modify-public playlist-read-private playlist-modify-private"
     client_id = config["client-id"]
     client_secret = config["client-secret"]
     redirect_url = config["redirect-url"]
